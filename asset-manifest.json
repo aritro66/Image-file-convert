@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Image-file-convert/static/css/main.884a7c06.chunk.css",
+    "main.js": "/Image-file-convert/static/js/main.0b65a267.chunk.js",
+    "main.js.map": "/Image-file-convert/static/js/main.0b65a267.chunk.js.map",
+    "runtime-main.js": "/Image-file-convert/static/js/runtime-main.003dac2b.js",
+    "runtime-main.js.map": "/Image-file-convert/static/js/runtime-main.003dac2b.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/Image-file-convert/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.99665e60.chunk.js": "/Image-file-convert/static/js/2.99665e60.chunk.js",
+    "static/js/2.99665e60.chunk.js.map": "/Image-file-convert/static/js/2.99665e60.chunk.js.map",
+    "index.html": "/Image-file-convert/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/Image-file-convert/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.884a7c06.chunk.css.map": "/Image-file-convert/static/css/main.884a7c06.chunk.css.map",
+    "static/js/2.99665e60.chunk.js.LICENSE.txt": "/Image-file-convert/static/js/2.99665e60.chunk.js.LICENSE.txt",
+    "static/media/converticon.ab94e323.png": "/Image-file-convert/static/media/converticon.ab94e323.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.003dac2b.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.99665e60.chunk.js",
+    "static/css/main.884a7c06.chunk.css",
+    "static/js/main.0b65a267.chunk.js"
+  ]
+}
