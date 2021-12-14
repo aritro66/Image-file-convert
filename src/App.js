@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import NavigationBarDisplay from './components/NavigationBarDisplay';
+import PngToJpeg from './components/PngToJpeg';
+import PngToWebp from './components/PngToWebp';
+import JpegToPng from "./components/JpegToPng";
+import JpegToWebp from './components/JpegToWebp';
+import WebpToJpeg from './components/WebpToJpeg';
+import WebpToPng from './components/WebpToPng';
+
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavigationBarDisplay />
+      <PngToJpeg />
+      <PngToWebp />
+      <JpegToPng />
+      <JpegToWebp />
+      <WebpToJpeg />
+      <WebpToPng />
+      
     </div>
   );
 }
