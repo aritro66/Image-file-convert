@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Form, Button ,Modal} from 'react-bootstrap';
 import ConvertImage from "react-convert-image";
 
-export default function JpegToPng() {
+export default function FileConvert({type,convertTo}) {
     const [convert, setConvert] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [imageUrl, setImageUrl] = useState("");
@@ -16,7 +16,7 @@ export default function JpegToPng() {
 
     function handleForm(e) {
         e.preventDefault();
-        if (inputEl.current.files[0].name.search(".jpeg") !== -1) {
+        if (inputEl.current.files[0].name.search("."+type) !== -1) {
             setConvert(true);
             setImageUrl(URL.createObjectURL(inputEl.current.files[0]));
         }
@@ -37,11 +37,11 @@ export default function JpegToPng() {
 
     return (
         <div className="convert-layout">
-            <h2>JPEG TO PNG</h2>
+            <h2>{type.toUpperCase()} TO {convertTo.toUpperCase()}</h2>
             <Form onSubmit={handleForm} onReset={resetForm}>
                 <Form.Group controlId="formFile" className="mb-3">
-                    <Form.Label>Choose JPEG File</Form.Label>
-                    <Form.Control type="file" ref={inputEl} required accept=".jpeg" />
+                    <Form.Label>Choose {type.toUpperCase()} File</Form.Label>
+                    <Form.Control type="file" ref={inputEl} required accept={"."+type} />
                 </Form.Group>
                 <Button variant="primary" size="lg" type="submit">
                     Submit
@@ -56,7 +56,7 @@ export default function JpegToPng() {
                 <ConvertImage
                     image={imageUrl}
                     onConversion={handleConvertedImage}
-                    format="png"
+                    format={convertTo}
                 />
                 </div>
                 <img src={imageUrl} alt="" style={{height:"100px",width:"100px",margin:"10px 0"}} />
@@ -68,7 +68,7 @@ export default function JpegToPng() {
                 <Modal.Header>
                     <Modal.Title>File Type</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Please choose JPEG file</Modal.Body>
+                <Modal.Body>Please choose {type.toUpperCase()} file</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={closeModal}>
                         Close
@@ -80,3 +80,4 @@ export default function JpegToPng() {
         </div>
     )
 }
+

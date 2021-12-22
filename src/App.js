@@ -1,25 +1,21 @@
 import './App.css';
 import React from "react";
 import NavigationBarDisplay from './components/NavigationBarDisplay';
-import PngToJpeg from './components/PngToJpeg';
-import PngToWebp from './components/PngToWebp';
-import JpegToPng from "./components/JpegToPng";
-import JpegToWebp from './components/JpegToWebp';
-import WebpToJpeg from './components/WebpToJpeg';
-import WebpToPng from './components/WebpToPng';
+import FileConvert from './components/FileConvert';
 
 
 function App() {
+  const data=[{type:"png", convertTo:"jpeg"}, {type:"png", convertTo:"webp"} ,{type:"jpeg", convertTo:"png"},
+  {type:"jpeg", convertTo:"webp"}, {type:"webp", convertTo:"jpeg"}, {type:"webp", convertTo:"png"}];
   
   return (
     <div className="App">
       <NavigationBarDisplay />
-      <PngToJpeg />
-      <PngToWebp />
-      <JpegToPng />
-      <JpegToWebp />
-      <WebpToJpeg />
-      <WebpToPng />
+      {
+        data.map(({type,convertTo})=>{
+          return <FileConvert type={type} convertTo={convertTo}/>
+        })
+      }
       
     </div>
   );
